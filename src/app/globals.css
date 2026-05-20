@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --color-matcha: #7BA05B;
+  --color-cream: #F5E8D3;
+  --color-soft-white: #FAFAF7;
+  --color-pistachio: #9DBF82;
+  --color-wood: #8C6A4F;
+  --color-sage: #B2C6A3;
+}
+
+:root {
+  --background: var(--color-cream);
+  --foreground: #2d3748;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  overflow-x: hidden;
+}
+
+.clay-card {
+  background: rgba(245, 232, 211, 0.6);
+  backdrop-filter: blur(16px);
+  border-radius: 24px;
+  box-shadow: 
+    8px 8px 24px rgba(140, 106, 79, 0.1),
+    -8px -8px 24px rgba(255, 255, 255, 0.8),
+    inset 2px 2px 8px rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.clay-btn {
+  background: var(--color-matcha);
+  color: var(--color-soft-white);
+  border-radius: 9999px;
+  box-shadow: 
+    6px 6px 12px rgba(123, 160, 91, 0.3),
+    -6px -6px 12px rgba(255, 255, 255, 0.8),
+    inset 2px 2px 4px rgba(157, 191, 130, 0.5);
+  transition: all 0.3s ease;
+}
+
+.clay-btn:hover {
+  box-shadow: 
+    4px 4px 8px rgba(123, 160, 91, 0.4),
+    -4px -4px 8px rgba(255, 255, 255, 0.9),
+    inset 4px 4px 8px rgba(157, 191, 130, 0.6);
+  transform: translateY(2px);
+}
