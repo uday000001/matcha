@@ -71,7 +71,7 @@ const LiquidTextMaterial = {
 
 function Diagram() {
   const { viewport } = useThree();
-  const diagramRef = useRef<any>();
+  const diagramRef = useRef<any>(null);
   
   useFrame((state) => {
     if (diagramRef.current) {
@@ -110,7 +110,7 @@ function Scene() {
   const { viewport } = useThree();
   const scale = useAspect(1920, 1080, 1); // Fixed aspect ratio (width, height, factor)
   
-  const materialRef = useRef<any>();
+  const materialRef = useRef<any>(null);
   const [textures, setTextures] = useState<THREE.Texture[]>([]);
   const [currentFrame, setCurrentFrame] = useState(0);
 
